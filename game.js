@@ -24,6 +24,7 @@ export class Game extends Phaser.Scene {
         this.load.audio('coin-sound', 'audio/coin.mp3');
         this.load.audio('damage-sound', 'audio/damage-sound.mp3');
         this.load.audio('death-music', 'audio/death-music.mp3');
+        this.load.audio('background-music', 'audio/ost.mp3');
         
         this.load.spritesheet('dude', 
             'sprites/dude.png',
@@ -38,6 +39,9 @@ export class Game extends Phaser.Scene {
         this.sound.stopAll()
         //CARREGAR FONS/PLATAFORMES
         this.add.image(400, 300, 'background');
+        this.music = this.sound.add('background-music');
+        this.music.play();
+
 
         //Crear status viu/mort i videes
         this.alive = true;
