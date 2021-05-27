@@ -40,7 +40,7 @@ export class Game extends Phaser.Scene {
         //CARREGAR FONS/PLATAFORMES
         this.add.image(400, 300, 'background');
         this.music = this.sound.add('background-music');
-        this.music.play();
+        this.music.play({volume: 0.5});
 
 
         //Crear status viu/mort i videes
@@ -267,6 +267,7 @@ export class Game extends Phaser.Scene {
         if (this.alive == false)
         {
             this.physics.pause();
+            this.sound.stopAll()
             this.cameras.main.shake(20);
             this.gameoverImage.visible = true;
             this.player.setTint(0xff0000);

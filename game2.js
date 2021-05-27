@@ -294,6 +294,7 @@ export class Game2 extends Phaser.Scene {
         if (this.alive == false)
         {
             this.physics.pause();
+            this.sound.stopAll()
             this.cameras.main.shake(20);
             this.gameoverImage.visible = true;
             this.player.setTint(0xff0000);
@@ -305,6 +306,7 @@ export class Game2 extends Phaser.Scene {
         if (this.win == true)
         {
             this.physics.pause();
+            this.sound.stopAll()
             this.winImage.visible = true;
             this.player.setTint(0xf2e675);
             this.player.anims.play('turn');
