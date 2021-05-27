@@ -41,7 +41,7 @@ export class Game2 extends Phaser.Scene {
     }
 
     create() {
-         this.sound.stopAll()
+         //this.sound.stopAll()
          //CARREGAR FONS/PLATAFORMES
          this.add.image(400, 300, 'background');
 
