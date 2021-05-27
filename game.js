@@ -193,6 +193,7 @@ export class Game extends Phaser.Scene {
             if (this.lives == 0)
             {
                 this.alive = false;
+                this.sound.stopAll()
                 this.death_music = this.sound.add('death-music');
                 this.death_music.play({volume: 0.2});
             } else {
@@ -267,7 +268,6 @@ export class Game extends Phaser.Scene {
         if (this.alive == false)
         {
             this.physics.pause();
-            this.sound.stopAll()
             this.cameras.main.shake(20);
             this.gameoverImage.visible = true;
             this.player.setTint(0xff0000);
