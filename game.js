@@ -1,5 +1,5 @@
-import { RestartButton } from "../components/restart-button.js";
-import { MenuButton } from "../components/menu-button.js";
+import { RestartButton } from "./components/restart-button.js";
+import { MenuButton } from "./components/menu-button.js";
 
 export class Game extends Phaser.Scene {
 

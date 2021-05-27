@@ -1,4 +1,4 @@
-import { PlayButton } from "../components/play-button.js";
+import { PlayButton } from "./components/play-button.js";
 
 export class Menu extends Phaser.Scene {
 
